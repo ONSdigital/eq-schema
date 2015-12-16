@@ -1,0 +1,2 @@
+class QuestionnaireException(Exception):
+    pass

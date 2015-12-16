@@ -1,0 +1,64 @@
+{
+  "schema" : 0.1,
+  "id": 22,
+  "survey": 23,
+  "description":"This questionnaire forms part of survey 23",
+  "created" : {
+    "by":"some_user",
+    "at":1422748799
+  },
+  "approved": {
+    "by" : "another_user",
+    "at" : 1425427199
+  },
+  "sections" : [
+    {
+      "id":"section1",
+      "repetition":false,
+      "branching":false,
+      "blocks": [
+        {
+          "id":"block1",
+          "repetition":false,
+          "branching":false,
+          "questions" : [
+            {
+              "type": "SimpleValueQuestion",
+              "id": "q1",
+              "content": {
+                "introduction" : "This is a simple question that collects a single value.  it performs simple validation on the response to ensure that a value is provided and that the value is between 3 and 20 chars.",
+                "body" : "Please enter your first name",
+                "hint" : "If your name is longer than 20 chars, tell us your nickname"
+              },
+              "display": {
+                "conditions": false,
+                "properties": false,
+              },
+              "fields": [
+                {
+                  "type": "TextField",
+                  "code": "0110",
+                  "validation": [
+                    "required":true,
+                    "length": {
+                      "minimum" : 3,
+                      "maximum" : 20
+                    }
+                  ]
+                }
+              ],
+              "created" : {
+                "by":"some_user",
+                "at":1422748799
+              },
+              "approved": {
+                "by" : "another_user",
+                "at" : 1425427199
+              },
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
