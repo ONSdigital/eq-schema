@@ -1,4 +1,6 @@
-class SchemaParser(object):
+from parser import Parser
+
+class SchemaParser(Parser):
     def __init__(self, schema):
         pass
 

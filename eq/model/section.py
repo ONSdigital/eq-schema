@@ -1,5 +1,4 @@
 from questionnaire_exception import QuestionnaireException
-from block import Block
 
 class Section(object):
     def __init__(self):
@@ -9,6 +8,7 @@ class Section(object):
         self._current_block_index = 0
 
     def add_block(self, block):
+        from block import Block     # avoid circular import, Block only needed here
         if isinstance(block, Block):
             self._blocks.append(block)
         else:
@@ -33,6 +33,7 @@ class Section(object):
         pass
 
     def set_questionnaire(self, questionnaire):
+        from questionnaire import Questionnaire # avoid circular imports
         if isinstance(questionnaire, Questionnaire):
             self._questionnaire = questionnaire
         else:

@@ -1,5 +1,4 @@
 from questionnaire_exception import QuestionnaireException
-from section import Section
 
 class Questionnaire(object):
     def __init__(self):
@@ -10,6 +9,7 @@ class Questionnaire(object):
         self.description = ''
 
     def add_section(self, section):
+        from section import Section     # avoid circular import, Section only needed here
         if isinstance(section, Section):
             section.set_questionnaire(self)
             self._sections.append(section)

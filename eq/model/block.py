@@ -1,13 +1,20 @@
 from questionnaire_exception import QuestionnaireException
-from question import Question
 
 class Block(object):
-    def __init__(self, section):
-        self._section = section
+    def __init__(self):
+        self._section = None
         self._questions = []
         self._current_question_index = 0
 
+    def set_section(self, section):
+        from section import Section # avoid circular imports, Section is only needed here
+        if isinstance(section, Section):
+            self._section = section
+        else:
+            raise QuestionnaireException("Must be an instance of Section")
+
     def add_question(self, question):
+        from question import Question # avoid circular imports
         if isinstance(question, Question):
             self._questions.append(question)
         else:

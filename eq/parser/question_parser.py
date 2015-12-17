@@ -1,6 +1,8 @@
-class QuestionParser(object):
-    def __init__(self):
+from eq.parser.parser import Parser
+
+class QuestionParser(Parser):
+    def __init__(self, schema):
         pass
 
-    def parse(schema):
+    def parse(self):
         pass
