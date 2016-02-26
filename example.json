@@ -1,0 +1,103 @@
+{
+	"schema_version": "0.0.1",
+	"questionnaire_id": "22",
+	"survey_id": "23",
+    "language_code": "en_GB",
+	"title": "Simple single question questionnaire",
+	"description": "This questionnaire forms part of survey 23",
+	"sections": [
+
+		{
+			"id": "GUID",
+			"title": "Finance",
+			"blocks": [{
+				"id": "GUID",
+				"title": "Your turnover",
+				"question_groups": [{
+					"id": "GUID",
+					"title": "gross turnover",
+					"validation": [{
+							"type": "is_equal",
+							"value": {
+								"a": "guid",
+								"b": "guid"
+							}
+						}
+
+					],
+					"questions": [{
+						"type": "SimpleValueQuestion",
+						"id": "GUID",
+						"content": {
+							"label": "Total Men employed",
+							"guidance": "How many men work for your company?"
+						},
+						"fields": [{
+							"type": "NumericField",
+							"id": "GUID",
+							"q_code": "110",
+							"validation": [{
+								"type": "required",
+								"value": "True"
+							}, {
+								"type": "range",
+								"value": {
+									"minimum": 0,
+									"maximum": 100000
+								}
+							}]
+						}]
+
+					}, {
+						"type": "SimpleValueQuestion",
+						"id": "GUID",
+						"content": {
+							"label": "Total Women employed",
+							"guidance": "How many women work for your company?"
+						},
+						"fields": [{
+							"type": "NumericField",
+							"id": "GUID",
+							"q_code": "110",
+							"validation": [{
+								"type": "required",
+								"value": "True"
+							}, {
+								"type": "range",
+								"value": {
+									"minimum": 0,
+									"maximum": 100000
+								}
+							}]
+						}]
+
+					}, {
+						"type": "SimpleValueQuestion",
+						"id": "GUID",
+						"content": {
+							"label": "How many people work for your company?",
+							"guidance": "Include anyone who works more than 0.5 of a standard 37.5hr working week."
+						},
+						"fields": [{
+							"type": "NumericField",
+							"id": "GUID",
+							"label": "Total employed",
+							"guidance": "Whole number",
+							"q_code": "110",
+							"validation": [{
+								"type": "required",
+								"value": "True"
+							}, {
+								"type": "range",
+								"value": {
+									"minimum": 0,
+									"maximum": 200000
+								}
+							}]
+						}]
+					}]
+				}]
+			}]
+		}
+	]
+}
